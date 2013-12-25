@@ -1,0 +1,26 @@
+<section data-ng-controller="IndexController">
+	<h1>This is the home view</h1>
+		<form class="form-horizontal" data-ng-submit="calculate()">
+		<div class="control-group">
+			<label class="control-label" for="xvals">x-values</label>
+			<div class="controls">
+				<input type="text" data-ng-model="xvals" id="xvals" placeholder="xvals" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="yvals">y-values</label>
+			<div class="controls">
+				<input data-ng-model="yvals" id="yvals" cols="30" rows="10" placeholder="yvals">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+	<span> The growth rate is {{growth_rate}} h<sup>-1</sup></span>
+	<div style='height: 400px;width:400px;'>
+		<linechart data="data" options="options"></linechart>
+	</div>
+</section>
